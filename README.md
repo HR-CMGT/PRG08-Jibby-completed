@@ -28,11 +28,11 @@ class Person {
 }
 
 class Jump implements Behavior {
-    private person : Person;
+    public person : Person;
     constructor(p:Person){
         this.person = p;
     }
-    doSomething(){
+    public doSomething(){
         console.log("I am doing something!");
     }
 }
@@ -43,10 +43,23 @@ interface Behavior {
 }
 ```
 
-### Keyboard listeners toevoegen en verwijderen
+### Event Listeners toevoegen en verwijderen
 
 ```
-this.fn = () => this.doSomething();
-window.addEventListener("keydown", this.fn);
-window.removeEventListener("keydown", this.fn);
+class Test {
+    private callback:EventListener;
+
+    constructor(){
+        // we slaan de functie op in een variabele
+        this.callback = (e:KeyboardEvent) => this.keyWasPressed(e);
+
+        // listener toevoegen
+        window.addEventListener("keydown", this.callback);
+    }
+
+    private keyWasPressed(e:KeyboardEvent):void {
+        // omdat de functie in een variabele zit kan je removeEventListener doen
+        window.removeEventListener("keydown", this.callback);
+    }
+}
 ```
