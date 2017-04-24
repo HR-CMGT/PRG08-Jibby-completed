@@ -18,12 +18,11 @@
 ## Strategy Pattern Voorbeeld
 
 ```
-
 class Person {
     private myBehavior:Behavior;
     constructor(){
-        this.myBehavior = new Behavior(this);
-        this.myBehavior.doSomething();
+        this.myBehavior = new Jump(this);
+        this.myBehavior.execute();
     }
 }
 
@@ -32,18 +31,20 @@ class Jump implements Behavior {
     constructor(p:Person){
         this.person = p;
     }
-    public doSomething(){
-        console.log("I am doing something!");
+    public execute(){
+        console.log("I am Jumping!");
     }
 }
 
 interface Behavior {
     person:Person;
-    doSomething() : void;
+    execute() : void;
 }
 ```
 
 ### Event Listeners toevoegen en verwijderen
+
+Als je een listener aan window toevoegt, dan blijft die listener altijd bestaan, zelfs als je game object wordt verwijderd. Het is beter om listeners te verwijderen als je ze niet meer nodig hebt.
 
 ```
 class Test {
