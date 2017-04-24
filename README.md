@@ -44,6 +44,8 @@ interface Behavior {
 
 ### Event Listeners toevoegen en verwijderen
 
+Als je een listener aan window toevoegt, dan blijft die listener altijd bestaan, zelfs als je game object wordt verwijderd. Het is beter om listeners te verwijderen als je ze niet meer nodig hebt.
+
 ```
 class Test {
     private callback:EventListener;
