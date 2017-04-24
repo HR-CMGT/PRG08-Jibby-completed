@@ -15,6 +15,14 @@
 - Het crashing gedrag heeft een listener die weer terug springt naar 'driving'.
 - De constructor van driving zet de snelheid, positie en de wielen van de auto in de beginstand.
 
+## Opdracht Praktijkles
+
+- Maak de game class een singleton met een gameOver method
+- Maak een array met blocks in game.ts. Er blijven telkens blocks van rechts het beeld in komen.
+- Na het springen verandert de behavior weer in driving.
+- Als de auto een block raakt crash je. Gebruik de collision detection functie.
+- Toon een score. Je score blijft optellen zo lang je niet crashed.
+
 ## Strategy Pattern Voorbeeld
 
 ```
