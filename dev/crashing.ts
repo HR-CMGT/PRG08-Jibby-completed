@@ -7,10 +7,10 @@ class Crashing implements Behavior {
     }
 
     public performBehavior():void {
-        this.car.y = 230;
-        this.car.wheel1.y = this.car.wheel2.y = 20;
         this.car.wheel1.speed = -2;
         this.car.wheel2.speed = 2;
+        this.car.y = 220;
+        this.car.div.classList.add("crashed");
 
         // hier wil je via een singleton game.gameOver() aanroepen
         document.getElementById("plateau").classList.add("animationpaused");
