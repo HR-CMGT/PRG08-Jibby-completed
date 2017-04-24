@@ -18,12 +18,11 @@
 ## Strategy Pattern Voorbeeld
 
 ```
-
 class Person {
     private myBehavior:Behavior;
     constructor(){
-        this.myBehavior = new Behavior(this);
-        this.myBehavior.doSomething();
+        this.myBehavior = new Jump(this);
+        this.myBehavior.execute();
     }
 }
 
@@ -32,14 +31,14 @@ class Jump implements Behavior {
     constructor(p:Person){
         this.person = p;
     }
-    public doSomething(){
-        console.log("I am doing something!");
+    public execute(){
+        console.log("I am Jumping!");
     }
 }
 
 interface Behavior {
     person:Person;
-    doSomething() : void;
+    execute() : void;
 }
 ```
 
