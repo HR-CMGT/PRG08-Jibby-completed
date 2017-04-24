@@ -15,7 +15,7 @@
 - Het crashing gedrag heeft een listener die weer terug springt naar 'driving'.
 - De constructor van driving zet de snelheid, positie en de wielen van de auto in de beginstand.
 
-## Opdracht Praktijkles
+## Optioneel
 
 - Maak de game class een singleton met een gameOver method
 - Maak een array met blocks in game.ts. Er blijven telkens blocks van rechts het beeld in komen.
