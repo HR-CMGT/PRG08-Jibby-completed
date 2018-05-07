@@ -1,4 +1,8 @@
 interface Behavior {
-    car:Car;
-    performBehavior() : void;
+    jibby:Jibby;
+    timer:number;
+    update() : void;
+    onWash():void;
+    onEat():void;
+    onPet():void;
 }
