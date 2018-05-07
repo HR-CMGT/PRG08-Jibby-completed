@@ -7,7 +7,7 @@ class Game {
     constructor() {
         let container = document.getElementById("container")!
         this.jibby = new Jibby(container)
-        requestAnimationFrame(() => this.gameLoop())
+        this.gameLoop()
     }
 
     private gameLoop(){
@@ -25,6 +25,6 @@ class Game {
 
 
 // load
-window.addEventListener("load", function() {
-    let g:Game = new Game()
+window.addEventListener("load", () => {
+    new Game()
 })
