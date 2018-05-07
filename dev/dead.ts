@@ -1,10 +1,10 @@
 class Dead implements Behavior {
-    public jibby:Jibby;
-    public timer:number;
+    public jibby:Jibby
+    public timer:number
 
     constructor(j:Jibby){
-        this.jibby = j;
-        this.jibby.setImage("dead.png");
+        this.jibby = j
+        this.jibby.setImage("dead.png")
     }
 
     public update():void {
@@ -17,6 +17,6 @@ class Dead implements Behavior {
     }
 
     public onPet():void {
-        this.jibby.myBehavior = new Zombie(this.jibby);
+        this.jibby.myBehavior = new Zombie(this.jibby)
     }
 }

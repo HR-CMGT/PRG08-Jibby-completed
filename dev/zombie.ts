@@ -1,10 +1,10 @@
 class Zombie implements Behavior {
-    public jibby:Jibby;
-    public timer:number;
+    public jibby:Jibby
+    public timer:number
 
     constructor(j:Jibby){
-        this.jibby = j;
-        this.jibby.setImage("zombie.png");
+        this.jibby = j
+        this.jibby.setImage("zombie.png")
     }
 
     public update():void {
